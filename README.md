@@ -1,10 +1,10 @@
-# <div align="left"><img src="../../img/rapids_logo.png" width="90px"/>&nbsp;nvgraph - NVIDIA graph library</div>
+# nvgraph - NVIDIA graph library
 
 Data analytics is a growing application of high-performance computing. Many advanced data analytics problems can be couched as graph problems. In turn, many of the common graph problems today can be couched as sparse linear algebra. This is the motivation for nvGRAPH, which harnesses the power of GPUs for linear algebra to handle large graph analytics and big data analytics problems.
 
 ## Development Setup
 
-### Conda{#conda}
+### Conda
 
 It is easy to install nvGraph using conda. You can get a minimal conda installation with [Miniconda](https://conda.io/miniconda.html) or get the full installation with [Anaconda](https://www.anaconda.com/download).
 
@@ -52,19 +52,19 @@ Compiler requirements:
 
 #### Build and Install the C/C++ CUDA components
 
-To install cuGraph from source, ensure the dependencies are met and follow the steps below:
+To install nvGraph from source, ensure the dependencies are met and follow the steps below:
 
 1) Clone the repository and submodules
 
   ```bash
-  # Set the localtion to cuGraph in an environment variable CUGRAPH_HOME 
-  export CUGRAPH_HOME=$(pwd)/cugraph
+  # Set the localtion to nvGraph in an environment variable NVGRAPH_HOME 
+  export NVGRAPH_HOME=$(pwd)/nvgraph
 
-  # Download the cuGraph repo
-  git clone https://github.com/rapidsai/cugraph.git $CUGRAPH_HOME
+  # Download the nvGraph repo
+  git clone https://github.com/rapidsai/graph-oss.git $NVGRAPH_HOME
 
   # Next load all the submodules
-  cd $CUGRAPH_HOME
+  cd $NVGRAPH_HOME
   git submodule update --init --recursive
   ```
 
@@ -73,8 +73,8 @@ To install cuGraph from source, ensure the dependencies are met and follow the s
   This project uses cmake for building the C/C++ library. To configure cmake, run:
 
   ```bash
-  cd $CUGRAPH_HOME
-  cd cpp/nvgraph/cpp	# enter nvgraph's cpp directory
+  cd $NVGRAPH_HOME
+  cd cpp	# enter nvgraph's cpp directory
   mkdir build   		# create build directory 
   cd build     		# enter the build directory
   cmake .. -DCMAKE_INSTALL_PREFIX=$CONDA_PREFIX 
@@ -89,9 +89,9 @@ The default installation  locations are `$CMAKE_INSTALL_PREFIX/lib` and `$CMAKE_
 #### C++ stand alone tests
 
 ```bash
-# Run the cugraph tests
-cd $CUGRAPH_HOME
-cd cpp/nvgraph/cpp/build
+# Run the tests
+cd $NVGRAPH_HOME
+cd cpp/build
 gtests/NVGRAPH_TEST # this is an executable file
 ```
 Other test executables require specific datasets and will result in failure if they are not present.
