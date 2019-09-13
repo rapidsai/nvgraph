@@ -106,7 +106,7 @@ link_directories("${CMAKE_CUDA_IMPLICIT_LINK_DIRECTORIES}" # CMAKE_CUDA_IMPLICIT
 ###################################################################################################
 # - library targets -------------------------------------------------------------------------------
 if(NVGRAPH_LIGHT MATCHES True)
-    add_library(nvgraph_rapids SHARED
+    add_library(nvgraph SHARED
                 thirdparty/cnmem/src/cnmem.cpp
                 src/arnoldi.cu
                 src/bfs.cu
@@ -140,7 +140,7 @@ if(NVGRAPH_LIGHT MATCHES True)
                 src/widest_path.cu
                )
 else(NVGRAPH_LIGHT MATCHES True)
-        add_library(nvgraph_rapids SHARED
+        add_library(nvgraph SHARED
                 thirdparty/cnmem/src/cnmem.cpp
                 src/arnoldi.cu
                 src/bfs.cu
@@ -203,13 +203,13 @@ endif(NVGRAPH_LIGHT MATCHES True)
 ###################################################################################################
 # - link libraries --------------------------------------------------------------------------------
 
-target_link_libraries(nvgraph_rapids cublas cusparse curand cusolver cudart )
+target_link_libraries(nvgraph cublas cusparse curand cusolver cudart )
 
 ###################################################################################################
 # - install targets -------------------------------------------------------------------------------
 
-install(TARGETS nvgraph_rapids
-        DESTINATION lib)
+install(TARGETS nvgraph
+        DESTINATION lib64)
 
 install(FILES
          ${CMAKE_CURRENT_SOURCE_DIR}/include/nvgraph.h
