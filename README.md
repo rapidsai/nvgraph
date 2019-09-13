@@ -30,12 +30,12 @@ Compiler requirements:
 
 It is easy to install nvGraph from source. As a convenience, a `build.sh` script is provided. Run the script as shown below to download the source code, build and install the library.  Note that the library will be installed to the location set in `$CUDA_ROOT` (eg. `export CUDA_ROOT=/usr/local/cuda`). These instructions were tested on Ubuntu 18.04.
 
-```bash
-$ git clone https://github.com/rapidsai/nvgraph.git
-$ cd nvgraph
-$ export CUDA_ROOT=/usr/local/cuda
-$ ./build.sh  # build the nvGraph library and install it to $CUDA_ROOT
-```
+  ```bash
+  git clone https://github.com/rapidsai/nvgraph.git
+  cd nvgraph
+  export CUDA_ROOT=/usr/local/cuda
+  ./build.sh  # build the nvGraph library and install it to $CUDA_ROOT
+  ```
 
 
 ### Manually build from Source 
