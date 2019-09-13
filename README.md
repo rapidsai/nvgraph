@@ -7,6 +7,24 @@ This repository contains the legacy version of nvGraph as it was in the NVIDIA C
 Recently, NVIDIA started developing [cuGraph](https://github.com/rapidsai/cugraph) a collection of graph analytics that process data found in GPU Dataframes as part of [RAPIDS](https://rapids.ai/). Most nvGraph algorithms are now part of cuGraph too. In addition, cuGraph aims to provide a NetworkX-like API that will be familiar to data scientists, so they can now build GPU-accelerated workflows more easily. For more project details, see [rapids.ai](https://rapids.ai/).
 
 ## Get nvGrpah
+#### Prerequisites
+
+Compiler requirement:
+
+* `gcc`     version 5.4+
+* `nvcc`    version 9.2
+* `cmake`   version 3.12
+
+
+
+CUDA requirement:
+
+* CUDA 9.2+
+* NVIDIA driver 396.44+
+* Pascal architecture or better
+
+You can obtain CUDA from [https://developer.nvidia.com/cuda-downloads](https://developer.nvidia.com/cuda-downloads).
+Compiler requirements:
 
 ### Using the script
 
@@ -27,27 +45,6 @@ The following instructions are for developers and contributors to nvGraph develo
 The nvGraph package is a C/C++ CUDA library. It needs to be installed in order for nvGraph to operate correctly.  
 
 The following instructions are tested on Linux systems.
-
-
-#### Prerequisites
-
-Compiler requirement:
-
-* `gcc`     version 5.4+
-* `nvcc`    version 9.2
-* `cmake`   version 3.12
-
-
-
-CUDA requirement:
-
-* CUDA 9.2+
-* NVIDIA driver 396.44+
-* Pascal architecture or better
-
-You can obtain CUDA from [https://developer.nvidia.com/cuda-downloads](https://developer.nvidia.com/cuda-downloads).
-Compiler requirements:
-
 
 #### Build and Install the C/C++ CUDA components
 
