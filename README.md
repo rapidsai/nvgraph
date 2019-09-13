@@ -27,7 +27,7 @@ Note: This conda installation only applies to Linux and Python versions 3.6/3.7.
 
 ### Build from Source {#source}
 
-The following instructions are for developers and contributors to nvGraph OSS development. These instructions are tested on Linux Ubuntu 16.04 & 18.04. Use these instructions to build nvGraph from source and contribute to its development.  Other operating systems may be compatible, but are not currently tested.
+The following instructions are for developers and contributors to nvGraph development. These instructions are tested on Linux Ubuntu 16.04 & 18.04. Use these instructions to build nvGraph from source and contribute to its development.  Other operating systems may be compatible, but are not currently tested.
 
 The nvGraph package is a C/C++ CUDA library. It needs to be installed in order for nvGraph to operate correctly.  
 
@@ -65,7 +65,7 @@ To install nvGraph from source, ensure the dependencies are met and follow the s
   export NVGRAPH_HOME=$(pwd)/nvgraph
 
   # Download the nvGraph repo
-  git clone https://github.com/rapidsai/graph-oss.git $NVGRAPH_HOME
+  git clone https://github.com/rapidsai/nvgraph.git $NVGRAPH_HOME
 
   # Next load all the submodules
   cd $NVGRAPH_HOME
