@@ -58,6 +58,10 @@ if(CMAKE_COMPILER_IS_GNUCXX)
     endif(CMAKE_CXX11_ABI)
 endif(CMAKE_COMPILER_IS_GNUCXX)
 
+if(NOT DEFINED NVGRAPH_LIGHT)
+    set(NVGRAPH_LIGHT True)
+endif(NOT DEFINED NVGRAPH_LIGHT)
+
 ###################################################################################################
 # - cmake modules ---------------------------------------------------------------------------------
 

@@ -34,7 +34,7 @@ It is easy to install nvGraph from source. As a convenience, a `build.sh` script
   git clone https://github.com/rapidsai/nvgraph.git
   cd nvgraph
   export CUDA_ROOT=/usr/local/cuda
-  ./build.sh  # build the nvGraph library and install it to $CUDA_ROOT
+  ./build.sh  # build the nvGraph library and install it to $CUDA_ROOT (you may need to add the sudo prefix)
   ```
 
 
