@@ -6,28 +6,23 @@ This repository contains the legacy version of nvGraph as it was in the NVIDIA C
 
 Recently, NVIDIA started developing [cuGraph](https://github.com/rapidsai/cugraph) a collection of graph analytics that process data found in GPU Dataframes as part of [RAPIDS](https://rapids.ai/). Most nvGraph algorithms are now part of cuGraph too. In addition, cuGraph aims to provide a NetworkX-like API that will be familiar to data scientists, so they can now build GPU-accelerated workflows more easily. For more project details, see [rapids.ai](https://rapids.ai/).
 
-## Development Setup
+## Get nvGrpah
 
-### Conda
+### Using the script
 
-It is easy to install nvGraph using conda. You can get a minimal conda installation with [Miniconda](https://conda.io/miniconda.html) or get the full installation with [Anaconda](https://www.anaconda.com/download).
-
-Install and update nvGraph using the conda command:
+It is easy to install nvGraph from source. As a convenience, a `build.sh` script is provided. Run the script as shown below to download the source code, build and install the library.  Note that the library will be installed to the location set in `$CUDA_ROOT` (eg. `export CUDA_ROOT=/usr/local/cuda`). These instructions were tested on Ubuntu 18.04.
 
 ```bash
-# CUDA 9.2
-conda install -c nvidia nvgraph
-
-# CUDA 10.0
-conda install -c nvidia/label/cuda10.0 nvgraph 
-
+$ git clone https://github.com/rapidsai/nvgraph.git
+$ cd nvgraph
+$ export CUDA_ROOT=/usr/local/cuda
+$ ./build.sh  # build the nvGraph library and install it to $CUDA_ROOT
 ```
 
-Note: This conda installation only applies to Linux and Python versions 3.6/3.7.
 
-### Build from Source {#source}
+### Manually build from Source 
 
-The following instructions are for developers and contributors to nvGraph development. These instructions are tested on Linux Ubuntu 16.04 & 18.04. Use these instructions to build nvGraph from source and contribute to its development.  Other operating systems may be compatible, but are not currently tested.
+The following instructions are for developers and contributors to nvGraph development. These instructions were tested on Linux Ubuntu 18.04. Use these instructions to build nvGraph from source and contribute to its development.  Other operating systems may be compatible, but are not currently tested.
 
 The nvGraph package is a C/C++ CUDA library. It needs to be installed in order for nvGraph to operate correctly.  
 
