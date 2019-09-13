@@ -93,7 +93,7 @@ gtests/NVGRAPH_TEST # this is an executable file
 Other test executables require specific datasets and will result in failure if they are not present.
 ## Documentation
 
-The C API documentation can be found in the [CUDA Toolkit Documentation](https://docs.nvidia.com/cuda/nvgraph/index.html).
+The C API documentation can be found in the [CUDA Toolkit Documentation](https://docs.nvidia.com/cuda/archive/10.0/nvgraph/index.html).
 
 
 
