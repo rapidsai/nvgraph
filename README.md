@@ -2,7 +2,7 @@
 
 Data analytics is a growing application of high-performance computing. Many advanced data analytics problems can be couched as graph problems. In turn, many of the common graph problems today can be couched as sparse linear algebra. This is the motivation for nvGraph, which harnesses the power of GPUs for linear algebra to handle large graph analytics.
 
-This repository contains the legacy version of nvGraph as it was in the NVIDIA CUDA Toolkit. The aim is to provide a way for nvGraph users to continue using nvGraph after the CUDA Toolkit stops releasing it. While we still accept bug reports, we do not actively develop this product. 
+This repository contains the legacy version of nvGraph as it was in the NVIDIA CUDA Toolkit. The aim is to provide a way for nvGraph users to continue using nvGraph after the CUDA Toolkit stops releasing it. While we still accept bug reports, we do not actively develop this product. If you find and can reproduce bugs in nvGRAPH, please [report issues on GitHub](https://github.com/rapidsai/nvgraph/issues/new).
 
 Recently, NVIDIA started developing [cuGraph](https://github.com/rapidsai/cugraph) a collection of graph analytics that process data found in GPU Dataframes as part of [RAPIDS](https://rapids.ai/). Most nvGraph algorithms are now part of cuGraph too. In addition, cuGraph aims to provide a NetworkX-like API that will be familiar to data scientists, so they can now build GPU-accelerated workflows more easily. For more project details, see [rapids.ai](https://rapids.ai/).
 
