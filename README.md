@@ -91,7 +91,7 @@ cd cpp/build
 gtests/NVGRAPH_TEST # this is an executable file
 ```
 These tests verify that the library was properly built and that the graph structure works as expected.
-We currently do not maintain the algorithm test suite.
+We currently do not maintain the algorithm test suite. Most graph analytics features are now developed and tested in [cuGraph](https://github.com/rapidsai/cugraph).
 
 ## Documentation
 
