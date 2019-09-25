@@ -90,7 +90,9 @@ cd $NVGRAPH_HOME
 cd cpp/build
 gtests/NVGRAPH_TEST # this is an executable file
 ```
-Other test executables require specific datasets and will result in failure if they are not present.
+These tests verify that the library was properly built and that the graph structure works as expected.
+We currently do not maintain the algorithm test suite.
+
 ## Documentation
 
 The C API documentation can be found in the [CUDA Toolkit Documentation](https://docs.nvidia.com/cuda/archive/10.0/nvgraph/index.html).
